@@ -19,8 +19,8 @@ public:
             temp=temp->next;
         }
         ListNode* dummy=head;
-        while (k>cnt) k=k-cnt;
-        if (cnt==k) return head;
+        k=k%cnt;
+        if (k==0) return head;
         int n=cnt-k;
         while (dummy) {
             if (n==1) {
